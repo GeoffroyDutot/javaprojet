@@ -58,9 +58,24 @@ public class MainConsole {
             String email = scanner.nextLine();        
             System.out.println("Saisissez votre date de naissance");
             String birthDate = scanner.nextLine();
-            LocalDate birth = DateUtils.toDate(birthDate);
-                    
-            Person p2 = new Person(lastName, firstName, email, birth);
+            try {
+	LocalDate birth = DateUtils.toDate(birthDate);
+	} catch (Exception e) {
+		boolean DateTimeParseException = false;
+		while (DateTimeParseException  != true) {
+			Scanner scanner1 = new Scanner(System.in);
+			System.out.println("Saisissez une date de naissance VALIDE: ");
+			String birthDate1 = scanner1.nextLine();
+			try {
+			LocalDate birth = DateUtils.toDate(birthDate1);
+			DateTimeParseException = true;
+			} catch(Exception f) {
+			DateTimeParseException = false;	
+		}
+	}
+}
+	LocalDate birth2 = DateUtils.toDate(birthDate);
+	Person p2 = new Person(firstName, lastName, email, birth2);
             Person.getList_person().set(id, p2);
             
             break;
@@ -157,9 +172,24 @@ public class MainConsole {
                 String email = scanner.nextLine();
                 System.out.println("Saisissez une date de naissance : ");
                 String birthDate = scanner.nextLine();
-                LocalDate birth = DateUtils.toDate(birthDate);
-                
-                Person p = new Person(firstName, lastName, email, birth);
+try {
+	LocalDate birth = DateUtils.toDate(birthDate);
+	} catch (Exception e) {
+		boolean DateTimeParseException = false;
+		while (DateTimeParseException  != true) {
+			Scanner scanner1 = new Scanner(System.in);
+			System.out.println("Saisissez une date de naissance VALIDE: ");
+			String birthDate1 = scanner1.nextLine();
+			try {
+			LocalDate birth = DateUtils.toDate(birthDate1);
+			DateTimeParseException = true;
+			} catch(Exception f) {
+			DateTimeParseException = false;	
+		}
+	}
+}
+	LocalDate birth2 = DateUtils.toDate(birthDate);
+	Person p = new Person(firstName, lastName, email, birth2);
                 Person.addPerson(p);
             }
             
