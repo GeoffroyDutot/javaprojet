@@ -28,10 +28,13 @@ public class MainConsole {
 		choice = scanner.nextLine().charAt(0);
         switch(choice) {
         case '1' : 
-        	for (int i=0; i<Person.getList_person().size();i++)
-        {
-            Person p1 = (Person) Person.getList_person().get(i);
-             System.out.println("Votre ID est : "+i+"\n"+p1.getFirstName()+"\n"+p1.getLastName()+"\n"+p1.getEmail()+"\n"+p1.getBirthDate()+"\n");          
+       case '1' : 
+        	for (int i=0; i<Person.getList_person().size();i++) {
+        	Person p1 = (Person) Person.getList_person().get(i);	
+        	LocalDate date2 = p1.getBirthDate();
+        	String date3 = DateUtils.toString(date2);
+  
+             System.out.println("Votre ID est : "+i+"\n"+p1.getFirstName()+" "+p1.getLastName()+" "+p1.getEmail()+" "+date3);          
             }
         break;
         case '2' : 
