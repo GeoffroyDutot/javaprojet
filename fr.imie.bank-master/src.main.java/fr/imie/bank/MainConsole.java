@@ -43,7 +43,7 @@ public class MainConsole {
             String mod = scanner.nextLine();
             int id = Integer.parseInt(mod);
             
-            System.out.println("Saisissez votre prénom :");
+            System.out.println("Saisissez votre prÃ©nom :");
             String firstName = scanner.nextLine();
             System.out.println("Saisissez votre nom :");
             String lastName = scanner.nextLine();        
@@ -82,30 +82,30 @@ public class MainConsole {
             int id1 = Integer.parseInt(id2);
             Person.getList_person().get(id1);
             Person.getList_person().remove(id1);
-            System.out.println("Données de la personne detruite !");
+            System.out.println("DonnÃ©es de la personne detruite !");
         break;
         case '5':
-        	 System.out.println("quel est l'ID de la personne à consulter ?");
+        	 System.out.println("quel est l'ID de la personne Ã  consulter ?");
              String id4 = scanner.nextLine();
              int id3 = Integer.parseInt(id4);
             Person p = Person.getList_person().get(id3);
-            for (int i=0; i<Person.getList_accounts().size();i++) {
+            for (int i=0; i<p.getList_accounts().size();i++) {
                 BankAccount b1 = (BankAccount) p.getList_accounts().get(i);
-                System.out.println("ID du compte : "+i+" Ton/Tes numéro(s) de compte(s) est/sont : "+b1.getNumber()+"\n");
+                System.out.println("ID du compte : "+i+" Ton/Tes numÃ©ro(s) de compte(s) est/sont : "+b1.getNumber()+"\n");
             }
         break;
-        case '6':System.out.println("quel est l'ID de la personne à consulter ?");
+        case '6':System.out.println("quel est l'ID de la personne Ã  consulter ?");
         String id10 = scanner.nextLine();
         int id9 = Integer.parseInt(id10);
         Person p4 = Person.getList_person().get(id9);
-        System.out.println("Saisissez un numéro de compte à créer :");
+        System.out.println("Saisissez un numÃ©ro de compte Ã  crÃ©er :");
         String nc = scanner.nextLine();
         BankAccount b = new BankAccount(nc);
         p4.addBankAccount(b);
         
         break;
         case '7':
-        	System.out.println("quel est l'ID de la personne à consulter ?");
+        	System.out.println("quel est l'ID de la personne Ã  consulter ?");
             String id8 = scanner.nextLine();
             int id7 = Integer.parseInt(id8);
             Person p3 = Person.getList_person().get(id7);
@@ -113,7 +113,7 @@ public class MainConsole {
 
             String modc = scanner.nextLine();
             int idc = Integer.parseInt(modc);
-            System.out.println("Saisissez votre nouveau numéro de compte :");
+            System.out.println("Saisissez votre nouveau numÃ©ro de compte :");
             String nnb = scanner.nextLine();
 
             BankAccount b2 = new BankAccount(nnb);
@@ -121,7 +121,7 @@ public class MainConsole {
 
             break;
         	case '8':
-        		System.out.println("quel est l'ID de la personne à consulter ?");
+        		System.out.println("quel est l'ID de la personne Ã  consulter ?");
                 String id6 = scanner.nextLine();
                 int id5 = Integer.parseInt(id6);
                Person p1 = Person.getList_person().get(id5);
@@ -143,7 +143,7 @@ public class MainConsole {
 	}
 	private static void New_Person() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Saisissez un prénom : ");
+		System.out.println("Saisissez un prÃ©nom : ");
 		String firstName = scanner.nextLine();
 		System.out.println("Saisissez un nom : ");
 		String lastName = scanner.nextLine();
