@@ -1,0 +1,29 @@
+
+# scm
+CVS/
+.svn/
+
+# dependencies
+.gradle/
+gradle*
+bower_components/
+node_modules/
+vendor/
+
+# build
+bin/
+build/
+out/
+target/
+
+# eclipse
+.metadata/
+Servers/
+.settings/
+.classpath
+.project
+
+# idea
+.idea/
+*.iml
+*.iws
