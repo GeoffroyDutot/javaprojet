@@ -18,7 +18,7 @@ public class MainConsole {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
-		PersonDao persondao = new PersonDao();
+		PersonDao personDao = new PersonDaoCsvImpl();
 		int choice = 0;
 		while (choice != 5) {
 			System.out.println("1) Lister les personnes");
@@ -39,7 +39,7 @@ public class MainConsole {
 					LocalDate date2 = p1.getBirthDate();
 					String date3 = DateUtils.toString(date2);
 
-					System.out.println("Votre ID est : " + i + "\n" + p1.getFirstName() + " " + p1.getLastName() + " "
+					System.out.println("ID" + i + "" + p1.getFirstName() + " " + p1.getLastName() + " "
 							+ p1.getEmail() + " " + date3);
 				}
 				break;
@@ -53,7 +53,7 @@ public class MainConsole {
 				int id = Integer.parseInt(mod);
 
 				try {
-					Person id1 = PersonDao.findById(id);
+					Person id1 = personDao.findById(id);
 					System.out.println("ID correct");
 				} catch (Exception g) {
 
@@ -64,7 +64,7 @@ public class MainConsole {
 						String mod2 = scanner.nextLine();
 						try {
 							int modid = Integer.parseInt(mod2);
-							Person modid1 = PersonDao.findById(modid);
+							Person modid1 = personDao.findById(modid);
 							lid = true;
 						} catch (Exception h) {
 							lid = false;
