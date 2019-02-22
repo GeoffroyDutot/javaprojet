@@ -62,7 +62,7 @@ public class MainConsole {
 				String mod = scanner.nextLine();
 				int id6 = Integer.parseInt(mod);
 
-<<<<<<< HEAD
+
 				//try {
 				//	Person id1 = personDao.findById(id6);
 				//	System.out.println("ID correct");
@@ -82,7 +82,6 @@ public class MainConsole {
 				//		}
 				//	}
 				//}
-=======
 				try {
 
 					//           PAS FAITTTT
@@ -106,7 +105,6 @@ public class MainConsole {
 						}
 					}
 				}
->>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
 
 				System.out.println("Saisissez votre prénom :");
 				String firstName = scanner.nextLine();
@@ -146,7 +144,7 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne a supprimer ?");
 				String id2 = scanner.nextLine();
 				int id1 = Integer.parseInt(id2);
-<<<<<<< HEAD
+
 
 				//try { //besoin de DAO
 				//	Person id11 = personDao.findById(id1);
@@ -168,7 +166,6 @@ public class MainConsole {
 				//	}
 				//}
 
-=======
 				
 				try {
 					// PAS FAIT
@@ -192,7 +189,7 @@ public class MainConsole {
 					}
 				}
 				
->>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
+
 				Person.getList_person().get(id1);
 				Person.getList_person().remove(id1);
 				System.out.println("Données de la personne detruite !");
@@ -222,7 +219,6 @@ public class MainConsole {
 			case '7':
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id8 = scanner.nextLine();
-<<<<<<< HEAD
 
 				//try {
 				//	Person id111 = personDao.findById(8);
@@ -244,7 +240,7 @@ public class MainConsole {
 				//	}
 				//}
 
-=======
+
 				
 				try {
 					//pas fait
@@ -268,7 +264,7 @@ public class MainConsole {
 					}
 				}
 				
->>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
+
 				int id7 = Integer.parseInt(id8);
 				Person p3 = Person.getList_person().get(id7);
 				System.out.println("Saisissez l'ID du compte que vous voulez modifiez :");
@@ -286,7 +282,7 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id611 = scanner.nextLine();
 				int id61 = Integer.parseInt(id611);
-<<<<<<< HEAD
+
 
 				//try {
 				//Person id1111 = personDao.findById(id61);
@@ -308,7 +304,7 @@ public class MainConsole {
 				//	}
 				//}
 
-=======
+
 				
 				try {
 					//pas fait
@@ -332,7 +328,7 @@ public class MainConsole {
 					}
 				}
 				
->>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
+
 				Person p1 = Person.getList_person().get(id61);
 				System.out.println("Saisissez le compte que vous voulez supprimer :");
 				String sidc = scanner.nextLine();
