@@ -30,6 +30,16 @@ public class MainConsole {
 			System.out.println("7) Modifier un compte");
 			System.out.println("8) Supprimer un compte");
 			System.out.println("9) Quitter");
+			
+			System.out.println("10) Récuperation de l'ensemble des personnes");
+			System.out.println("11) Récuperer une personne par son ID");
+			System.out.println("12) Sauvegarder une personne");
+			System.out.println("13) Sauvegarder l'ensemble des personnes");
+			
+			System.out.println("14) Récuperation de l'ensemble des comptes en banques");
+			System.out.println("15) Récuperer un compte par son ID");
+			System.out.println("16) Sauvegarder les comptes");
+			System.out.println("17) Sauvegarder les comptes de l'ensemble des personnes");
 
 			choice = scanner.nextLine().charAt(0);
 			switch (choice) {
@@ -168,6 +178,51 @@ public class MainConsole {
 
 			case '9':
 				System.exit(1);
+				break;
+				
+			case 10 :
+				PersonDao.findAll();
+				break;
+				
+			case 11 :
+				
+				break;
+				
+			case 12 :
+				
+				System.out.println("Veuillez rentrer l'id de la personne");
+				String data_id_person = sc.nextLine();
+				int id_person = Integer.valueOf(data_id_person);
+				Person p=(Person)Person.List_person.get(id_person);
+				PersonDao.save(p);
+				break;
+				
+			case 13 :
+				
+				PersonDao.saveAll(Person.List_person);
+				break;
+				
+			case 14 :
+				
+				break;
+			case 15 :
+				
+				break;
+				
+			case 16 :
+				
+				System.out.println("Veuillez rentrer l'id de la personne");
+				String data_id_account = sc.nextLine();
+				int id_account = Integer.valueOf(data_id_account);
+				Person c=(Person)Person.List_person.get(id_account);
+				PersonDao.save(c);
+				
+				break;
+	
+			case 17 :
+				
+				BankAccountDao.saveAll(Person.List_accounts);
+				
 				break;
 			}
 		}
