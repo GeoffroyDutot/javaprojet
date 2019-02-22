@@ -27,7 +27,6 @@ public class MainConsole {
 		
 		choice = scanner.nextLine().charAt(0);
         switch(choice) {
-        case '1' : 
        case '1' : 
         	for (int i=0; i<Person.getList_person().size();i++) {
         	Person p1 = (Person) Person.getList_person().get(i);	
@@ -57,8 +56,8 @@ public class MainConsole {
     		try {
     			LocalDate birth = DateUtils.toDate(birthDate);
     			
-    			Person p = new Person(firstName, lastName, email, birth);
-    			Person.addPerson(p);
+    			Person p1 = new Person(firstName, lastName, email, birth);
+    			Person.getList_person();
     			
     			} catch (Exception e) {
     				boolean DateTimeParseException = false;
@@ -70,8 +69,8 @@ public class MainConsole {
     					LocalDate birth2 = DateUtils.toDate(birthDate1);
     					DateTimeParseException = true;
     					
-    					Person p = new Person(firstName, lastName, email, birth2);
-    					Person.addPerson(p);
+    					Person p1 = new Person(firstName, lastName, email, birth2);
+    					Person.setList_person(id, p1);
     					} catch(Exception f) {
     					DateTimeParseException = false;	
     				}
@@ -179,4 +178,3 @@ public class MainConsole {
 		}
 	}
 }
-	
