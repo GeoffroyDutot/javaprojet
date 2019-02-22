@@ -1,5 +1,6 @@
 package fr.imie.bank.model;
 
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -243,3 +244,8 @@ public interface PersonDao {
 
 		
 	  
+=======
+public interface PersonDao extends Dao<Person> {
+
+}
+>>>>>>> 41c4e9aa27da00d6e19cc60ea2cbf5060f96e3cb
