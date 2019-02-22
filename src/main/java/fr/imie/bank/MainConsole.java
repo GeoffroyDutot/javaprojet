@@ -30,6 +30,16 @@ public class MainConsole {
 			System.out.println("7) Modifier un compte");
 			System.out.println("8) Supprimer un compte");
 			System.out.println("9) Quitter");
+			
+			System.out.println("10) Récuperation de l'ensemble des personnes");
+			System.out.println("11) Récuperer une personne par son ID");
+			System.out.println("12) Sauvegarder une personne");
+			System.out.println("13) Sauvegarder l'ensemble des personnes");
+			
+			System.out.println("14) Récuperation de l'ensemble des comptes en banques");
+			System.out.println("15) Récuperer un compte par son ID");
+			System.out.println("16) Sauvegarder les comptes");
+			System.out.println("17) Sauvegarder les comptes de l'ensemble des personnes");
 
 			choice = scanner.nextLine().charAt(0);
 			switch (choice) {
@@ -52,6 +62,7 @@ public class MainConsole {
 				String mod = scanner.nextLine();
 				int id6 = Integer.parseInt(mod);
 
+<<<<<<< HEAD
 				//try {
 				//	Person id1 = personDao.findById(id6);
 				//	System.out.println("ID correct");
@@ -71,6 +82,31 @@ public class MainConsole {
 				//		}
 				//	}
 				//}
+=======
+				try {
+
+					//           PAS FAITTTT
+				//Person id1 = PersonDao.findById(id);
+
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							//PAS ENCORE FAIT
+							//Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+>>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
 
 				System.out.println("Saisissez votre prénom :");
 				String firstName = scanner.nextLine();
@@ -110,6 +146,7 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne a supprimer ?");
 				String id2 = scanner.nextLine();
 				int id1 = Integer.parseInt(id2);
+<<<<<<< HEAD
 
 				//try { //besoin de DAO
 				//	Person id11 = personDao.findById(id1);
@@ -131,6 +168,31 @@ public class MainConsole {
 				//	}
 				//}
 
+=======
+				
+				try {
+					// PAS FAIT
+				//	Person id11 = PersonDao.findById(id1);
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							// pas f	ait
+							//Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+				
+>>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
 				Person.getList_person().get(id1);
 				Person.getList_person().remove(id1);
 				System.out.println("Données de la personne detruite !");
@@ -160,6 +222,7 @@ public class MainConsole {
 			case '7':
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id8 = scanner.nextLine();
+<<<<<<< HEAD
 
 				//try {
 				//	Person id111 = personDao.findById(8);
@@ -181,6 +244,31 @@ public class MainConsole {
 				//	}
 				//}
 
+=======
+				
+				try {
+					//pas fait
+				//	Person id111 = personDao.findById(8);
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							// APS FAIT
+							//Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+				
+>>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
 				int id7 = Integer.parseInt(id8);
 				Person p3 = Person.getList_person().get(id7);
 				System.out.println("Saisissez l'ID du compte que vous voulez modifiez :");
@@ -198,6 +286,7 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id611 = scanner.nextLine();
 				int id61 = Integer.parseInt(id611);
+<<<<<<< HEAD
 
 				//try {
 				//Person id1111 = personDao.findById(id61);
@@ -219,6 +308,31 @@ public class MainConsole {
 				//	}
 				//}
 
+=======
+				
+				try {
+					//pas fait
+					//Person id1111 = personDao.findById(id61);
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							// PAS FAIT
+							//Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+				
+>>>>>>> b88e6eb3a1bb0dc9b81f6ac844b150d6641e15b1
 				Person p1 = Person.getList_person().get(id61);
 				System.out.println("Saisissez le compte que vous voulez supprimer :");
 				String sidc = scanner.nextLine();
@@ -232,6 +346,51 @@ public class MainConsole {
 
 			case '9':
 				System.exit(1);
+				break;
+				
+			case 10 :
+				PersonDao.findAll();
+				break;
+				
+			case 11 :
+				
+				break;
+				
+			case 12 :
+				Scanner sc = new Scanner(System.in);
+				System.out.println("Veuillez rentrer l'id de la personne");
+				String data_id_person = sc.nextLine();
+				int id_person = Integer.valueOf(data_id_person);
+				Person x=(Person)Person.getList_person().get(id_person);
+				PersonDao.save(x);
+				break;
+				
+			case 13 :
+				
+				PersonDao.saveAll(Person.getList_person());
+				break;
+				
+			case 14 :
+				
+				break;
+			case 15 :
+				
+				break;
+				
+			case 16 :
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Veuillez rentrer l'id de la personne");
+				String data_id_account = scan.nextLine();
+				int id_account = Integer.valueOf(data_id_account);
+				Person c=(Person)Person.getList_person().get(id_account);
+				PersonDao.save(c);
+				
+				break;
+	
+			case 17 :
+				
+				BankAccountDao.saveAll(Person.getList_accounts());
+				
 				break;
 			}
 		}
