@@ -62,12 +62,10 @@ public class MainConsole {
 				int id6 = Integer.parseInt(mod);
 
 				try {
-<<<<<<< HEAD
+
 					//           PAS FAITTTT
 				//Person id1 = PersonDao.findById(id);
-=======
-					Person id1 = personDao.findById(id6);
->>>>>>> d9265a0f983faab9c5fa0bb730c4e2950cf0aaa8
+
 					System.out.println("ID correct");
 				} catch (Exception g) {
 
@@ -126,7 +124,8 @@ public class MainConsole {
 				int id1 = Integer.parseInt(id2);
 				
 				try {
-					Person id11 = personDao.findById(id1);
+					// PAS FAIT
+				//	Person id11 = PersonDao.findById(id1);
 					System.out.println("ID correct");
 				} catch (Exception g) {
 
@@ -137,7 +136,8 @@ public class MainConsole {
 						String mod2 = scanner.nextLine();
 						try {
 							int modid = Integer.parseInt(mod2);
-							Person modid1 = personDao.findById(modid);
+							// pas f	ait
+							//Person modid1 = personDao.findById(modid);
 							lid = true;
 						} catch (Exception h) {
 							lid = false;
@@ -176,7 +176,8 @@ public class MainConsole {
 				String id8 = scanner.nextLine();
 				
 				try {
-					Person id111 = personDao.findById(8);
+					//pas fait
+				//	Person id111 = personDao.findById(8);
 					System.out.println("ID correct");
 				} catch (Exception g) {
 
@@ -187,7 +188,8 @@ public class MainConsole {
 						String mod2 = scanner.nextLine();
 						try {
 							int modid = Integer.parseInt(mod2);
-							Person modid1 = personDao.findById(modid);
+							// APS FAIT
+							//Person modid1 = personDao.findById(modid);
 							lid = true;
 						} catch (Exception h) {
 							lid = false;
@@ -214,7 +216,8 @@ public class MainConsole {
 				int id61 = Integer.parseInt(id611);
 				
 				try {
-					Person id1111 = personDao.findById(id61);
+					//pas fait
+					//Person id1111 = personDao.findById(id61);
 					System.out.println("ID correct");
 				} catch (Exception g) {
 
@@ -225,7 +228,8 @@ public class MainConsole {
 						String mod2 = scanner.nextLine();
 						try {
 							int modid = Integer.parseInt(mod2);
-							Person modid1 = personDao.findById(modid);
+							// PAS FAIT
+							//Person modid1 = personDao.findById(modid);
 							lid = true;
 						} catch (Exception h) {
 							lid = false;
