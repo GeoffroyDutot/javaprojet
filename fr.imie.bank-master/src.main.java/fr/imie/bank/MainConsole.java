@@ -13,6 +13,7 @@ public class MainConsole {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
+		PersonDao persondao = new PersonDao();
 		int choice = 0;
 		while(choice != 5) {
 		System.out.println("1) Lister les personnes");
