@@ -39,8 +39,7 @@ public class MainConsole {
 					LocalDate date2 = p1.getBirthDate();
 					String date3 = DateUtils.toString(date2);
 
-					System.out.println("ID" + i + "" + p1.getFirstName() + " " + p1.getLastName() + " "
-							+ p1.getEmail() + " " + date3);
+					System.out.println("ID " + "Prénom" + " Nom" +  " Email "+ "Date de naissance" + "\n" + i + " " + p1.getFirstName() + " " + p1.getLastName() + " " + p1.getEmail() + " " + date3);
 				}
 				break;
 			case '2':
