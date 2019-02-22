@@ -1,6 +1,6 @@
 package fr.imie.bank.model;
 
-<<<<<<< HEAD
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -117,4 +117,4 @@ public interface BankAccountDao extends Dao<BankAccount> {
 	public List<BankAccount> findByPersonId(int id);
 
 }
->>>>>>> 41c4e9aa27da00d6e19cc60ea2cbf5060f96e3cb
+
