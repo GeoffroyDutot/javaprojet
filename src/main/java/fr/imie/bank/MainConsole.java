@@ -1,6 +1,6 @@
 package fr.imie.bank;
 
-import fr.imie.bank.model.BankAccount;
+import fr.imie.bank.model.BankAccount; 
 import fr.imie.bank.model.Person;
 import fr.imie.bank.model.PersonDao;
 import fr.imie.bank.DateUtils;
@@ -20,7 +20,7 @@ public class MainConsole {
 		Scanner scanner = new Scanner(System.in);
 		PersonDao personDao = new PersonDaoCsvImpl();
 		int choice = 0;
-		while (choice != 5) {
+		while (choice != 9) {
 			System.out.println("1) Lister les personnes");
 			System.out.println("2) Ajouter une personne");
 			System.out.println("3) Modifier une personne");
@@ -59,11 +59,15 @@ public class MainConsole {
 				System.out.println("Saisissez id de la personne a modifier :");
 
 				String mod = scanner.nextLine();
-				int id = Integer.parseInt(mod);
+				int id6 = Integer.parseInt(mod);
 
 				try {
+<<<<<<< HEAD
 					//           PAS FAITTTT
 				//Person id1 = PersonDao.findById(id);
+=======
+					Person id1 = personDao.findById(id6);
+>>>>>>> d9265a0f983faab9c5fa0bb730c4e2950cf0aaa8
 					System.out.println("ID correct");
 				} catch (Exception g) {
 
@@ -95,7 +99,7 @@ public class MainConsole {
 					LocalDate birth = DateUtils.toDate(birthDate);
 
 					Person p1 = new Person(firstName, lastName, email, birth);
-					Person.changeListPerson(id, p1);
+					Person.changeListPerson(id6, p1);
 
 				} catch (Exception e) {
 					boolean DateTimeParseException = false;
@@ -108,7 +112,7 @@ public class MainConsole {
 							DateTimeParseException = true;
 
 							Person p1 = new Person(firstName, lastName, email, birth2);
-							Person.changeListPerson(id, p1);
+							Person.changeListPerson(id6, p1);
 						} catch (Exception f) {
 							DateTimeParseException = false;
 						}
@@ -120,6 +124,27 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne a supprimer ?");
 				String id2 = scanner.nextLine();
 				int id1 = Integer.parseInt(id2);
+				
+				try {
+					Person id11 = personDao.findById(id1);
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+				
 				Person.getList_person().get(id1);
 				Person.getList_person().remove(id1);
 				System.out.println("Données de la personne detruite !");
@@ -149,6 +174,27 @@ public class MainConsole {
 			case '7':
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id8 = scanner.nextLine();
+				
+				try {
+					Person id111 = personDao.findById(8);
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+				
 				int id7 = Integer.parseInt(id8);
 				Person p3 = Person.getList_person().get(id7);
 				System.out.println("Saisissez l'ID du compte que vous voulez modifiez :");
@@ -164,9 +210,30 @@ public class MainConsole {
 				break;
 			case '8':
 				System.out.println("quel est l'ID de la personne à consulter ?");
-				String id6 = scanner.nextLine();
-				int id5 = Integer.parseInt(id6);
-				Person p1 = Person.getList_person().get(id5);
+				String id611 = scanner.nextLine();
+				int id61 = Integer.parseInt(id611);
+				
+				try {
+					Person id1111 = personDao.findById(id61);
+					System.out.println("ID correct");
+				} catch (Exception g) {
+
+					boolean lid = false;
+					while (lid != true) {
+						System.out.println("ID incorrect");
+						System.out.println("Saisissez un id correct de la personne a modifier :");
+						String mod2 = scanner.nextLine();
+						try {
+							int modid = Integer.parseInt(mod2);
+							Person modid1 = personDao.findById(modid);
+							lid = true;
+						} catch (Exception h) {
+							lid = false;
+						}
+					}
+				}
+				
+				Person p1 = Person.getList_person().get(id61);
 				System.out.println("Saisissez le compte que vous voulez supprimer :");
 				String sidc = scanner.nextLine();
 
