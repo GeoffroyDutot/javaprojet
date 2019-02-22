@@ -41,9 +41,10 @@ public class MainConsole {
 			System.out.println("16) Sauvegarder les comptes");
 			System.out.println("17) Sauvegarder les comptes de l'ensemble des personnes");
 
-			choice = scanner.nextLine().charAt(0);
+			String choice2 = scanner.nextLine();
+			choice = Integer.parseInt(choice2);
 			switch (choice) {
-			case '1':
+			case 1:
 				for (int i = 0; i < Person.getList_person().size(); i++) {
 					Person p1 = (Person) Person.getList_person().get(i);
 					LocalDate date2 = p1.getBirthDate();
@@ -52,10 +53,10 @@ public class MainConsole {
 					System.out.println("ID " + "Prénom" + " Nom" +  " Email "+ "Date de naissance" + "\n" + i + " " + p1.getFirstName() + " " + p1.getLastName() + " " + p1.getEmail() + " " + date3);
 				}
 				break;
-			case '2':
+			case 2:
 				New_Person();
 				break;
-			case '3':
+			case 3:
 				System.out.println("Saisissez id de la personne a modifier :");
 
 				String mod = scanner.nextLine();
@@ -118,7 +119,7 @@ public class MainConsole {
 				}
 
 				break;
-			case '4':
+			case 4:
 				System.out.println("quel est l'ID de la personne a supprimer ?");
 				String id2 = scanner.nextLine();
 				int id1 = Integer.parseInt(id2);
@@ -149,7 +150,7 @@ public class MainConsole {
 				Person.getList_person().remove(id1);
 				System.out.println("Données de la personne detruite !");
 				break;
-			case '5':
+			case 5:
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id4 = scanner.nextLine();
 				int id3 = Integer.parseInt(id4);
@@ -160,7 +161,7 @@ public class MainConsole {
 							+ b1.getNumber() + "\n");
 				}
 				break;
-			case '6':
+			case 6:
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id10 = scanner.nextLine();
 				int id9 = Integer.parseInt(id10);
@@ -171,7 +172,7 @@ public class MainConsole {
 				p4.addBankAccount(b);
 
 				break;
-			case '7':
+			case 7:
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id8 = scanner.nextLine();
 				
@@ -210,7 +211,7 @@ public class MainConsole {
 				p3.getList_accounts().set(idc, b2);
 
 				break;
-			case '8':
+			case 8:
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id611 = scanner.nextLine();
 				int id61 = Integer.parseInt(id611);
@@ -248,7 +249,7 @@ public class MainConsole {
 
 				break;
 
-			case '9':
+			case 9:
 				System.exit(1);
 				break;
 				

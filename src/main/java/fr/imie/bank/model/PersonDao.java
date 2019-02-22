@@ -1,6 +1,6 @@
 package fr.imie.bank.model;
 
-<<<<<<< HEAD
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -55,7 +55,7 @@ public interface PersonDao {
         return list_db_person;
 	
 }		
-	public static void findById(int id_personne) {
+	public static Person findById(int id_personne) {
 
 
         String path = "D:\\Nicolas\\Documents\\ECOLE\\IMIE\\Module Java\\Tp_findesemaine_souheil\\database.csv";               
@@ -64,15 +64,15 @@ public interface PersonDao {
     	   
     	   
     	      	  
-		   Person recup_data_person=(Person)Person.List_person.get(id_personne); 
+		   Person recup_data_person=(Person)Person.getList_person().get(id_personne); 
 			
-		   String firstName = recup_data_person.getFirstname();
+		   String firstName = recup_data_person.getFirstName();
                             
-           String lastName = recup_data_person.getLastname();
+           String lastName = recup_data_person.getLastName();
                              
            String email = recup_data_person.getEmail();
            
-           LocalDate Datedenaissance = recup_data_person.getDatenaissance();
+           LocalDate Datedenaissance = recup_data_person.getBirthDate();
            String Birth = DateUtils.toString(Datedenaissance);
               
            System.out.println("Voici le prénom correspondant à l'ID :"+ id_personne + ":	" + firstName);
@@ -113,7 +113,9 @@ public interface PersonDao {
         catch(Exception e){
 		    	   System.out.println(e);
 		           
-		      }                                	            
+		      }
+       // PAS TERMINE
+	return null;                                	            
        }
 
 	public static void  save(Person person) {
@@ -130,7 +132,7 @@ public interface PersonDao {
                
                
                
-               LocalDate Datedenaissance = person.getDatenaissance();
+               LocalDate Datedenaissance = person.getBirthDate();
                String Birth = DateUtils.toString(Datedenaissance);
              
                database.write(data_person[0] + ";" + data_person[1] + ";" + data_person[2] + ";" + data_person[3] + "\n");
@@ -178,7 +180,7 @@ public interface PersonDao {
        try {
        	 
            FileWriter database = new FileWriter(fichier, false);
-       	database.write("id_person;prenom;nom;email;datenaissance; \n");
+       
        	       	       	       	   		   		   		
            for (int i=0; i<people.size(); i++) { 
                
@@ -195,7 +197,7 @@ public interface PersonDao {
            	                               	           	                       
        		}
 			catch (Exception e) {
-		            System.out.println("Impossible de creer le fichier");
+		            System.out.println(e);
 		        }
 		       try {
 		        BufferedReader br = new BufferedReader(new FileReader(fichier));
@@ -211,18 +213,19 @@ public interface PersonDao {
 		       }
 		    }
 	public static String[] toString(Person person) {
-		String firstName = person.getFirstname();
+		String[] data_list = {"a","a","a","a"};
+		String firstName = person.getFirstName();
         
         
-        String lastName = person.getLastname();
+        String lastName = person.getLastName();
         
             
         String email_p = person.getEmail();
         
         
-        LocalDate Datedenaissance = person.getDatenaissance();
+        LocalDate Datedenaissance = person.getBirthDate();
         String Birth = DateUtils.toString(Datedenaissance);
-        String[] data_list ;
+        
         data_list[0] = firstName;
         data_list[1] = lastName;
         data_list[2] = email_p;
@@ -244,8 +247,4 @@ public interface PersonDao {
 
 		
 	  
-=======
-public interface PersonDao extends Dao<Person> {
 
-}
->>>>>>> 41c4e9aa27da00d6e19cc60ea2cbf5060f96e3cb
