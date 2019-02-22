@@ -20,7 +20,7 @@ public class MainConsole {
 		Scanner scanner = new Scanner(System.in);
 		PersonDao personDao = new PersonDaoCsvImpl();
 		int choice = 0;
-		while (choice != 5) {
+		while (choice != 9) {
 			System.out.println("1) Lister les personnes");
 			System.out.println("2) Ajouter une personne");
 			System.out.println("3) Modifier une personne");
