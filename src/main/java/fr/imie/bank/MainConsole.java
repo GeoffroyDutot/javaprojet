@@ -1,6 +1,6 @@
 package fr.imie.bank;
 
-import fr.imie.bank.model.BankAccount; 
+import fr.imie.bank.model.BankAccount;
 import fr.imie.bank.model.Person;
 import fr.imie.bank.model.PersonDao;
 import fr.imie.bank.DateUtils;
@@ -50,7 +50,8 @@ public class MainConsole {
 					LocalDate date2 = p1.getBirthDate();
 					String date3 = DateUtils.toString(date2);
 
-					System.out.println("ID " + "Prénom" + " Nom" +  " Email "+ "Date de naissance" + "\n" + i + " " + p1.getFirstName() + " " + p1.getLastName() + " " + p1.getEmail() + " " + date3);
+					System.out.println("ID " + "Prénom" + " Nom" + " Email " + "Date de naissance" + "\n" + i + " "
+							+ p1.getFirstName() + " " + p1.getLastName() + " " + p1.getEmail() + " " + date3);
 				}
 				break;
 			case 2:
@@ -62,6 +63,26 @@ public class MainConsole {
 				String mod = scanner.nextLine();
 				int id6 = Integer.parseInt(mod);
 
+
+				//try {
+				//	Person id1 = personDao.findById(id6);
+				//	System.out.println("ID correct");
+				//} catch (Exception g) {
+
+				//	boolean lid = false;
+				//	while (lid != true) {
+				//		System.out.println("ID incorrect");
+				//		System.out.println("Saisissez un id correct de la personne a modifier :");
+				//		String mod2 = scanner.nextLine();
+				//		try {
+				//			int modid = Integer.parseInt(mod2);
+				//			Person modid1 = personDao.findById(modid);
+				//			lid = true;
+				//		} catch (Exception h) {
+				//			lid = false;
+				//		}
+				//	}
+				//}
 				try {
 
 					//           PAS FAITTTT
@@ -108,10 +129,11 @@ public class MainConsole {
 						String birthDate1 = scanner1.nextLine();
 						try {
 							LocalDate birth2 = DateUtils.toDate(birthDate1);
-							DateTimeParseException = true;
+							
 
 							Person p1 = new Person(firstName, lastName, email, birth2);
 							Person.changeListPerson(id6, p1);
+							DateTimeParseException = true;
 						} catch (Exception f) {
 							DateTimeParseException = false;
 						}
@@ -123,6 +145,28 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne a supprimer ?");
 				String id2 = scanner.nextLine();
 				int id1 = Integer.parseInt(id2);
+
+
+				//try { //besoin de DAO
+				//	Person id11 = personDao.findById(id1);
+				//	System.out.println("ID correct");
+				//} catch (Exception g) {
+
+				//	boolean lid = false;
+				//	while (lid != true) {
+				//		System.out.println("ID incorrect");
+				//		System.out.println("Saisissez un id correct de la personne a modifier :");
+				//		String mod2 = scanner.nextLine();
+				//		try {
+				//			int modid = Integer.parseInt(mod2);
+				//			Person modid1 = personDao.findById(modid);
+				//			lid = true;
+				//		} catch (Exception h) {
+				//			lid = false;
+				//		}
+				//	}
+				//}
+
 				
 				try {
 					// PAS FAIT
@@ -146,6 +190,7 @@ public class MainConsole {
 					}
 				}
 				
+
 				Person.getList_person().get(id1);
 				Person.getList_person().remove(id1);
 				System.out.println("Données de la personne detruite !");
@@ -175,6 +220,28 @@ public class MainConsole {
 			case 7:
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id8 = scanner.nextLine();
+
+				//try {
+				//	Person id111 = personDao.findById(8);
+				//	System.out.println("ID correct");
+				//} catch (Exception g) {
+
+				//	boolean lid = false;
+				//	while (lid != true) {
+				//		System.out.println("ID incorrect");
+				//		System.out.println("Saisissez un id correct de la personne a modifier :");
+				//		String mod2 = scanner.nextLine();
+				//		try {
+				//			int modid = Integer.parseInt(mod2);
+				//			Person modid1 = personDao.findById(modid);
+				//			lid = true;
+				//		} catch (Exception h) {
+				//			lid = false;
+				//		}
+				//	}
+				//}
+
+
 				
 				try {
 					//pas fait
@@ -198,6 +265,7 @@ public class MainConsole {
 					}
 				}
 				
+
 				int id7 = Integer.parseInt(id8);
 				Person p3 = Person.getList_person().get(id7);
 				System.out.println("Saisissez l'ID du compte que vous voulez modifiez :");
@@ -215,6 +283,29 @@ public class MainConsole {
 				System.out.println("quel est l'ID de la personne à consulter ?");
 				String id611 = scanner.nextLine();
 				int id61 = Integer.parseInt(id611);
+
+
+				//try {
+				//Person id1111 = personDao.findById(id61);
+				//	System.out.println("ID correct");
+				//} catch (Exception g) {
+
+				//	boolean lid = false;
+				//	while (lid != true) {
+				//		System.out.println("ID incorrect");
+				//		System.out.println("Saisissez un id correct de la personne a modifier :");
+				//		String mod2 = scanner.nextLine();
+				//		try {
+				//			int modid = Integer.parseInt(mod2);
+				//			Person modid1 = personDao.findById(modid);
+				//			lid = true;
+				//		} catch (Exception h) {
+				//			lid = false;
+				//		}
+				//	}
+				//}
+
+
 				
 				try {
 					//pas fait
@@ -238,6 +329,7 @@ public class MainConsole {
 					}
 				}
 				
+
 				Person p1 = Person.getList_person().get(id61);
 				System.out.println("Saisissez le compte que vous voulez supprimer :");
 				String sidc = scanner.nextLine();
